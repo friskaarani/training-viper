@@ -8,7 +8,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     //TEXTFIELD
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var inputPass: UITextField!
@@ -37,14 +36,14 @@ class LoginViewController: UIViewController {
         self.inputPass.isSecureTextEntry = true
     }
     
-    @IBAction func btnLoginOnClick(_ sender: Any) {
+    @IBAction func btnLoginTapped(_ sender: Any) {
         let email: String = inputEmail.text ?? ""
         let password: String = inputPass.text ?? ""
-        self.presenter?.login(email: email, password: password)
+        self.presenter?.didTappedBtnLogin(email: email, password: password)
     }
     
-    @IBAction func btnSignUpOnClick(_ sender: Any) {
-        self.presenter?.signUpOnClick(viewController: self)
+    @IBAction func btnSignUpTapped(_ sender: Any) {
+        self.presenter?.didTappedBtnSignUp(viewController: self)
     }
 }
 
@@ -60,8 +59,6 @@ extension LoginViewController: LoginViewProtocol {
 }
 
 extension LoginViewController: UITextFieldDelegate {
-
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == inputEmail {
             iconEmail.image = UIImage(systemName: "envelope.fill")

@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ZW" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="EWallet_Viper" customModuleProvider="target">
             <connections>
                 <outlet property="errorMessage" destination="OmL-2e-XOj" id="uiS-5x-7fZ"/>
                 <outlet property="iconEmail" destination="mCi-BC-97n" id="1ct-E1-DfP"/>
@@ -181,11 +181,11 @@ all the features in Zwallet.</string>
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="btnLoginOnClick:" destination="-1" eventType="touchDown" id="aa3-gu-iXd"/>
+                                <action selector="btnLoginTapped:" destination="-1" eventType="touchUpInside" id="hfq-je-kGW"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRL-26-BJo">
-                            <rect key="frame" x="15" y="410" width="345" height="38"/>
+                            <rect key="frame" x="15" y="406" width="345" height="38"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Let's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdw-08-Y2l">
                                     <rect key="frame" x="43" y="8" width="187" height="17"/>
@@ -200,7 +200,7 @@ all the features in Zwallet.</string>
                                         <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                     </buttonConfiguration>
                                     <connections>
-                                        <action selector="btnSignUpOnClick:" destination="-1" eventType="touchUpInside" id="AKy-8o-o88"/>
+                                        <action selector="btnSignUpTapped:" destination="-1" eventType="touchUpInside" id="ZRp-gi-bQO"/>
                                     </connections>
                                 </button>
                             </subviews>

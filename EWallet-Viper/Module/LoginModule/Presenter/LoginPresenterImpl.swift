@@ -19,11 +19,11 @@ class LoginPresenterImpl: LoginPresenterProtocol {
         self.router = router
     }
     
-    func login(email: String, password: String) {
+    func didTappedBtnLogin(email: String, password: String) {
         self.interactor.postLoginData(email: email, password: password)
     }
     
-    func signUpOnClick(viewController: UIViewController) {
+    func didTappedBtnSignUp(viewController: UIViewController) {
         self.router.navigateToRegister(viewController: viewController)
     }
 }

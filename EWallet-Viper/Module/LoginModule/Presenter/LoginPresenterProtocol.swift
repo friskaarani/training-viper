@@ -10,6 +10,6 @@ import UIKit
 
 
 protocol LoginPresenterProtocol {
-    func login(email: String, password: String)
-    func signUpOnClick(viewController : UIViewController)
+    func didTappedBtnLogin(email: String, password: String)
+    func didTappedBtnSignUp(viewController : UIViewController)
 }

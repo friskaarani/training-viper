@@ -17,14 +17,14 @@ class HistoryInteractorImpl: HistoryInteractor {
         self.invoiceNetworkManager = networkManager
     }
 
-    func getHistory() {
+    func getTransactionHistory() {
         self.invoiceNetworkManager.getAllInvoice { (data, error) in
             var transactions: [TransactionEntity] = []
 
             data?.forEach({ (invoiceData) in
                 transactions.append(TransactionEntity(name: invoiceData.name, type: invoiceData.type, imageUrl: "\(AppConstant.baseUrl)\(invoiceData.image)", amount: invoiceData.amount, notes: invoiceData.notes))
 
-                self.interactorOutput?.loadedHistory(transaction: transactions)
+                self.interactorOutput?.loadedTransactionHistory(transaction: transactions)
             })
         }
     }

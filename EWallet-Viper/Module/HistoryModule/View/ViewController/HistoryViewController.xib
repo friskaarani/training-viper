@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController" customModule="ZWallet" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController" customModule="EWallet_Viper" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="WfU-iN-cDB" id="NO3-w7-jjq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,15 +33,30 @@
                     <rect key="frame" x="0.0" y="59" width="375" height="608"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JA-be-Fxn">
+                    <rect key="frame" x="335" y="18" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="Tcn-tz-X1b"/>
+                        <constraint firstAttribute="height" constant="24" id="W0j-wj-Tec"/>
+                    </constraints>
+                    <color key="tintColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="didTappedCloseButton:" destination="-1" eventType="touchUpInside" id="NmK-IS-gF6"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Jfp-TL-MoZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7gZ-EF-Lma"/>
                 <constraint firstItem="WfU-iN-cDB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y5o-dM-rbw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5JA-be-Fxn" secondAttribute="trailing" constant="16" id="ZXJ-4f-yM8"/>
                 <constraint firstItem="Jfp-TL-MoZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="ahG-Xi-rbN"/>
                 <constraint firstItem="6eX-bV-7oK" firstAttribute="leading" secondItem="Jfp-TL-MoZ" secondAttribute="trailing" constant="20" id="k3V-7x-ku9"/>
                 <constraint firstItem="6eX-bV-7oK" firstAttribute="centerY" secondItem="Jfp-TL-MoZ" secondAttribute="centerY" id="pPk-b5-rZm"/>
+                <constraint firstItem="5JA-be-Fxn" firstAttribute="centerY" secondItem="6eX-bV-7oK" secondAttribute="centerY" id="rCw-e8-Avb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WfU-iN-cDB" secondAttribute="bottom" id="yd2-f9-yzi"/>
                 <constraint firstItem="WfU-iN-cDB" firstAttribute="top" secondItem="Jfp-TL-MoZ" secondAttribute="bottom" constant="15" id="yre-2d-1tY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WfU-iN-cDB" secondAttribute="trailing" id="z0z-9F-KlV"/>
@@ -51,6 +66,7 @@
     </objects>
     <resources>
         <image name="arrow-left" width="28" height="28"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -21,7 +21,7 @@ class HistoryPresenterImpl: HistoryPresenter {
     }
 
     func loadHistory() {
-        self.interactor.getHistory()
+        self.interactor.getTransactionHistory()
     }
 
     func dismiss(viewController: UIViewController) {
@@ -30,7 +30,7 @@ class HistoryPresenterImpl: HistoryPresenter {
 }
 
 extension HistoryPresenterImpl: HistoryInteractorOutput {
-    func loadedHistory(transaction: [TransactionEntity]) {
+    func loadedTransactionHistory(transaction: [TransactionEntity]) {
         self.view.showTransaction(transaction: transaction)
     }
 }

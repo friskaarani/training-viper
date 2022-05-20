@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HistoryInteractor {
-    func getHistory()
+    func getTransactionHistory()
 }

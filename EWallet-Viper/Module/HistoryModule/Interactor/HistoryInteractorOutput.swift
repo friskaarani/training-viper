@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HistoryInteractorOutput {
-    func loadedHistory(transaction: [TransactionEntity])
+    func loadedTransactionHistory(transaction: [TransactionEntity])
 }

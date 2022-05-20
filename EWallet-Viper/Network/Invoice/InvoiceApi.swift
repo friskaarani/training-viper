@@ -49,7 +49,8 @@ extension InvoiceApi: TargetType {
     }
 
     public var baseURL: URL {
-        return URL(string: String(describing: "http://54.172.233.0:8000"))!
+//        return URL(string: String(describing: "http://54.172.233.0:8000"))!
+        return URL(string: String(describing: "http://0.0.0.0:3006"))!
     }
 
     public var method: Moya.Method {
